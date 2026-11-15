@@ -28,25 +28,27 @@
 
     <section id="personajes" class="characters-container">
         <h2>Los Sombreros de Paja</h2>
-        <div class="card-grid">
-            <!-- Luffy -->
-            <div class="card">
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Buscar tripulante por nombre o rol...">
+        </div>
+
+        <div class="card-grid" id="cardGrid">
+            <div class="card" data-fruta="Gomu Gomu no Mi (Hito Hito no Mi, Modelo: Nika)" data-sueno="Convertirse en el Rey de los Piratas">
                 <div class="card-img">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJYohUPSGPYBz8zkwvXE3kSoCqiYyW5PNgEA8gQ6UUbw&s=10" alt="Monkey D. Luffy">
                 </div>
                 <h3>Monkey D. Luffy</h3>
                 <p>Capitán • Recompensa: 3,000,000,000 Berries</p>
             </div>
-            <!-- Zoro -->
-            <div class="card">
+            <div class="card" data-fruta="Ninguna (Estilo Santoryu)" data-sueno="Convertirse en el mejor espadachín del mundo">
                 <div class="card-img">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJkty5sWUA0kZsi5T9UZdVR9D34BMOXDRpkisVRSKtXA&s=10" alt="Roronoa Zoro">
                 </div>
                 <h3>Roronoa Zoro</h3>
                 <p>Espadachín • Recompensa: 1,111,000,000 Berries</p>
             </div>
-            <!-- Sanji -->
-            <div class="card">
+            <div class="card" data-fruta="Ninguna (Estilo Pierna Negra / Germa)" data-sueno="Encontrar el All Blue">
                 <div class="card-img">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSViTp2gPaD16tePiDH6ovxK6a2Io78Oc79KY0OxpZng&s=10" alt="Vinsmoke Sanji">
                 </div>
@@ -56,9 +58,23 @@
         </div>
     </section>
 
+    <div id="characterModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <img id="modalImg" src="" alt="">
+            <h3 id="modalName"></h3>
+            <p id="modalRole" class="modal-badge"></p>
+            <div class="modal-details">
+                <p><strong>Habilidad / Fruta:</strong> <span id="modalFruit"></span></p>
+                <p><strong>Sueño:</strong> <span id="modalDream"></span></p>
+            </div>
+        </div>
+    </div>
+
     <footer>
-        <p>Proyecto Final de Desarrollo Web — Hecho con HTML y CSS puro.</p>
+        <p>Proyecto Final de Desarrollo Web</p>
     </footer>
 
+    <script src="main.js" defer></script>
 </body>
 </html>
