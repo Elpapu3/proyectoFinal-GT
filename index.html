@@ -15,6 +15,7 @@
         <nav>
             <a href="#inicio">Inicio</a>
             <a href="#personajes">Tripulación</a>
+            <a href="#foro">Foro</a>
         </nav>
     </header>
 
@@ -41,6 +42,7 @@
                 <h3>Monkey D. Luffy</h3>
                 <p>Capitán • Recompensa: 3,000,000,000 Berries</p>
             </div>
+
             <div class="card" data-fruta="Ninguna (Estilo Santoryu)" data-sueno="Convertirse en el mejor espadachín del mundo">
                 <div class="card-img">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJkty5sWUA0kZsi5T9UZdVR9D34BMOXDRpkisVRSKtXA&s=10" alt="Roronoa Zoro">
@@ -48,6 +50,23 @@
                 <h3>Roronoa Zoro</h3>
                 <p>Espadachín • Recompensa: 1,111,000,000 Berries</p>
             </div>
+
+            <div class="card" data-fruta="Ninguna (Clima-Tact y Zeus)" data-sueno="Dibujar el mapa completo del mundo">
+                <div class="card-img">
+                    <img src="https://static.wikia.nocookie.net/onepiece/images/6/68/Nami_Anime_Post_Timeskip_Infobox.png" alt="Nami">
+                </div>
+                <h3>Nami</h3>
+                <p>Navegante • Recompensa: 366,000,000 Berries</p>
+            </div>
+
+            <div class="card" data-fruta="Ninguna (Tirador / Pop Greens)" data-sueno="Convertirse en un valiente guerrero del mar">
+                <div class="card-img">
+                    <img src="https://static.wikia.nocookie.net/onepiece/images/3/35/Usopp_Anime_Post_Timeskip_Infobox.png" alt="Usopp">
+                </div>
+                <h3>Usopp</h3>
+                <p>Francotirador • Recompensa: 500,000,000 Berries</p>
+            </div>
+
             <div class="card" data-fruta="Ninguna (Estilo Pierna Negra / Germa)" data-sueno="Encontrar el All Blue">
                 <div class="card-img">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSViTp2gPaD16tePiDH6ovxK6a2Io78Oc79KY0OxpZng&s=10" alt="Vinsmoke Sanji">
@@ -55,6 +74,71 @@
                 <h3>Vinsmoke Sanji</h3>
                 <p>Cocinero • Recompensa: 1,032,000,000 Berries</p>
             </div>
+
+            <div class="card" data-fruta="Hito Hito no Mi" data-sueno="Curar cualquier enfermedad del mundo">
+                <div class="card-img">
+                    <img src="https://static.wikia.nocookie.net/onepiece/images/a/af/Tony_Tony_Chopper_Anime_Post_Timeskip_Infobox.png" alt="Tony Tony Chopper">
+                </div>
+                <h3>Tony Tony Chopper</h3>
+                <p>Médico • Recompensa: 1,000 Berries</p>
+            </div>
+
+            <div class="card" data-fruta="Hana Hana no Mi" data-sueno="Descubrir la verdadera historia del Siglo Vacío">
+                <div class="card-img">
+                    <img src="https://static.wikia.nocookie.net/onepiece/images/b/bc/Nico_Robin_Anime_Post_Timeskip_Infobox.png" alt="Nico Robin">
+                </div>
+                <h3>Nico Robin</h3>
+                <p>Arqueóloga • Recompensa: 930,000,000 Berries</p>
+            </div>
+
+            <div class="card" data-fruta="Ninguna (Cyborg / Tecnología Vegapunk)" data-sueno="Construir un barco que dé la vuelta al mundo">
+                <div class="card-img">
+                    <img src="https://static.wikia.nocookie.net/onepiece/images/8/8c/Franky_Anime_Post_Timeskip_Infobox.png" alt="Franky">
+                </div>
+                <h3>Franky</h3>
+                <p>Carpintero • Recompensa: 394,000,000 Berries</p>
+            </div>
+
+            <div class="card" data-fruta="Yomi Yomi no Mi" data-sueno="Reencontrarse con Laboon en los Cabos Gemelos">
+                <div class="card-img">
+                    <img src="https://static.wikia.nocookie.net/onepiece/images/4/41/Brook_Anime_Post_Timeskip_Infobox.png" alt="Brook">
+                </div>
+                <h3>Brook</h3>
+                <p>Músico • Recompensa: 383,000,000 Berries</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="form-toggle-container">
+        <button id="openFormBtn" class="btn"> Agregar Nuevo Personaje</button>
+    </div>
+
+    <div id="formModal" class="modal">
+        <div class="modal-content form-modal-content">
+            <span class="close-btn" id="closeFormBtn">&times;</span>
+            <h3>Nuevo Personaje</h3>
+            <form id="addCharacterForm" class="add-form-vertical">
+                <input type="text" id="newName" placeholder="Nombre (ej: Portgas D. Ace)" required>
+                <input type="text" id="newRole" placeholder="Rol y recompensa (ej: Comandante • 550M)" required>
+                <input type="url" id="newImg" placeholder="URL de la imagen" required>
+                <input type="text" id="newFruit" placeholder="Habilidad o Fruta del Diablo" required>
+                <input type="text" id="newDream" placeholder="Sueño u objetivo" required>
+                <button type="submit" class="btn">Guardar Personaje</button>
+            </form>
+        </div>
+    </div>
+
+    <section id="foro" class="forum-container">
+        <h2>¿Qué es el One Piece para vos?</h2>
+        <p class="forum-subtitle">Dejá tu teoría o debate con la comunidad pirata.</p>
+
+        <form id="forumForm" class="forum-form">
+            <input type="text" id="forumUser" placeholder="Tu nombre o apodo pirata..." required>
+            <textarea id="forumComment" placeholder="Escribe tu teoría sobre qué es el One Piece..." rows="4" required></textarea>
+            <button type="submit" class="btn">Publicar Opinión</button>
+        </form>
+
+        <div id="commentsList" class="comments-grid">
         </div>
     </section>
 
